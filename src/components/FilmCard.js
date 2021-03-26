@@ -1,6 +1,9 @@
 import logo from "../logo.svg";
 import React, {Component} from "react";
-import FormControls from './FormControls'
+import FormControls from './FormControls';
+import { Button } from 'carbon-components-react';
+import '../app.scss';
+import './FilmCard.scss'
 
 class FilmCard extends Component {
     constructor(props) {
@@ -25,8 +28,8 @@ class FilmCard extends Component {
                 </p>
                 <img className="film-card__poster" width={100} height={150} src={logo} alt={'asdasd'}/>
                 <p className="film-card__description">{descFilm}</p>
-                <a className="film-card__comments" href={'#.html'} onClick={this.myClick}>{this.state.isOpen ? 'Закрыть описание' : 'Открыть описание'}</a>
                 <FormControls/>
+                <Button className="red" onClick={this.myClick}>{this.state.isOpen ? 'Закрыть описание' : 'Открыть описание'}</Button>
             </article>
         )
     }

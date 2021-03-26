@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import FilmCard from './components/FilmCard'
-import films from './mocs/film'
+import {films} from './mocs/film';
+import FilmList from './components/FilmList';
 
 
-ReactDOM.render(<FilmCard film={films[0]} foo="bar"></FilmCard>, document.querySelector('#root'));
+
+ReactDOM.render(<FilmList films = {films}></FilmList>, document.querySelector('#root'));
